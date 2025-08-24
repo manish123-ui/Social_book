@@ -12,8 +12,7 @@ import random
 @login_required(login_url='signin')
 def index(request):
     user_object = User.objects.get(username=request.user.username)
-    user_profile = Profile.objects.get(user=user_object)
-
+    user_profile, created = Profile.objects.get_or_create(user=user_object)
     user_following_list = []
     feed = []
 
@@ -162,8 +161,7 @@ def follow(request):
 
 @login_required(login_url='signin')
 def settings(request):
-    user_profile = Profile.objects.get(user=request.user)
-
+    user_profile, created = Profile.objects.get_or_create(user=request.user)
     if request.method == 'POST':
         
         if request.FILES.get('image') == None:
