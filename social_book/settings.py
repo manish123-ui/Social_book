@@ -113,18 +113,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # ✅ Media files
 # Local storage for development
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # ✅ Switch to Cloudinary in production
-if not DEBUG:
-    CLOUDINARY_STORAGE = {
-        'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
-        'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
-        'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
-    }
 
-    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 =======
 
 # ✅ Media files (Cloudinary for everything)
@@ -146,7 +138,3 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # No need for MEDIA_ROOT now, all uploads go to Cloudinary
 
-import cloudinary.uploader
-result = cloudinary.uploader.upload("static/images/book-icon.png")
-print(result["url"])
->>>>>>> a62626a (your commit message here)
