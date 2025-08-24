@@ -77,7 +77,9 @@ uvicorn==0.34.2
 virtualenv==20.31.2
 virtualenvwrapper-win==1.2.7
 webencodings==0.5.1
+whitenoise==6.6.0
 xhtml2pdf==0.2.17
+
 
 
 
