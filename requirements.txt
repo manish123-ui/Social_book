@@ -18,6 +18,7 @@ cssselect2==0.8.0
 distlib==0.3.9
 Django==5.2.1
 django-cloudinary-storage
+django-environ
 django-filter==25.1
 django-tailwind==4.0.1
 djangorestframework==3.16.0
@@ -77,5 +78,6 @@ virtualenv==20.31.2
 virtualenvwrapper-win==1.2.7
 webencodings==0.5.1
 xhtml2pdf==0.2.17
+
 
 
