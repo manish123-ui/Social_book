@@ -8,7 +8,7 @@ SECRET_KEY = 'django-insecure-y6on4&^y1+^c$5_h4eh-i2fz-c6jmagos9$5b!o!%8=08s#!tm
 <<<<<<< HEAD
 DEBUG = False
 =======
-DEBUG = True  # set True locally if needed
+DEBUG = False # set True locally if needed
 >>>>>>> a62626a (your commit message here)
 
 ALLOWED_HOSTS = [
